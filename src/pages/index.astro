@@ -1,21 +1,68 @@
----
-import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
-import Markdown from '../components/Markdown.astro';
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jasa Desain & Jual Rumah</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f2f2f2; color: #333; }
+    header { background: #1e3a8a; color: white; padding: 20px; text-align: center; }
+    nav { background: #2563eb; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+    .card { background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 300px; margin: 15px; overflow: hidden; }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card-body { padding: 15px; }
+    .card-body h3 { margin: 0 0 10px; }
+    .card-body p { font-size: 14px; }
+    .price { font-weight: bold; color: #1e3a8a; margin-top: 10px; }
+    .whatsapp-btn { 
+      display: inline-block; margin-top: 10px; padding: 10px 15px; 
+      background-color: #25D366; color: white; border: none; 
+      border-radius: 5px; text-decoration: none; font-weight: bold; 
+    }
+    footer { background: #1e3a8a; color: white; text-align: center; padding: 20px; margin-top: 30px; }
+  </style>
+</head>
+<body>
 
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
+  <header>
+    <h1>Toko Desain & Properti</h1>
+    <p>Konsultasi dan pemesanan desain bangunan atau properti siap jual</p>
+  </header>
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
----
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Katalog</a>
+    <a href="#">Tentang Kami</a>
+    <a href="#">Kontak</a>
+  </nav>
 
-<Layout title="Welcome to Astro.">
-    <ContextAlert class="mb-8" />
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
-</Layout>
+  <section class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Desain+Rumah+Minimalis" alt="Desain Rumah 1">
+      <div class="card-body">
+        <h3>Desain Rumah Minimalis</h3>
+        <p>Ukuran 6x12m, 3 Kamar, 2 Kamar Mandi. Cocok untuk keluarga muda.</p>
+        <p class="price">Rp 1.500.000 (Desain Digital)</p>
+        <a class="whatsapp-btn" href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Desain%20Rumah%20Minimalis" target="_blank">Hubungi via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Rumah+Dijual+Bogor" alt="Rumah Bogor">
+      <div class="card-body">
+        <h3>Rumah Dijual di Bogor</h3>
+        <p>Lokasi strategis, 2 lantai, sudah SHM. Luas tanah 120m².</p>
+        <p class="price">Rp 750.000.000</p>
+        <a class="whatsapp-btn" href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20rumah%20di%20Bogor" target="_blank">Hubungi via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Toko Desain & Properti. All rights reserved.
+  </footer>
+
+</body>
+</html>
